@@ -22,11 +22,10 @@ void conjugate(complex<double> a);
 void multiplicativeInverse(complex<double> a);
 
 
-
-
-
 vector<complex<string>> values;
 vector <complex<double>> complexNumbers;
+
+
 int main()
 {
    
@@ -60,7 +59,14 @@ void readData()
 
                 double real,imag;
                 sscanf(value.c_str(),"%lf+%lfj",&real,&imag);
+                complexNumbers.push_back(complex<double>(real,imag));
+
+                /*
+                size_t pos = value.find("+");
+                double real = std::stod(value.substr(0, pos));
+                double imag = std::stod(value.substr(pos+1, value.length()-1));
                 complexNumbers.push_back(std::complex<double>(real,imag));
+                */
             }
             
         }
@@ -114,11 +120,6 @@ void conjugate(complex<double> a)
 
 void multiplicativeInverse(complex<double> a)
 {
-    complex<double> c = 1/a;
+    complex<double> c = 1.0 / a;
     cout << "Multiplicative Inverse of "<<a<<" : " << c << endl;
 }
-
-
-
-
-
