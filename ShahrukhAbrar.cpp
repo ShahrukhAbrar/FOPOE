@@ -15,6 +15,14 @@ using std::complex;
 
 void readData();
 void add(complex<double> a, complex<double> b);
+void subtract(complex<double> a, complex<double> b);
+void multiply(complex<double> a, complex<double> b);
+void divide(complex<double> a, complex<double> b);
+void conjugate(complex<double> a);
+void multiplicativeInverse(complex<double> a);
+
+
+
 
 
 vector<complex<string>> values;
@@ -24,8 +32,6 @@ int main()
    
 
     readData();
-    //check vector values size
-    
 
     for(int i=0; i<complexNumbers.size(); i++)
     {
@@ -64,6 +70,16 @@ void readData()
     {
         cout << "File not found" << endl;
     }
+}
+
+void writeData()
+{
+    //Pain for Tomorrow Shahrukh, I sleep now
+}
+
+void sorting()
+{
+    //Half Asleep
 }
 
 void add(complex<double> a, complex<double> b)
